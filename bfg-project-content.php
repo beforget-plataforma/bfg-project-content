@@ -21,20 +21,7 @@ require_once plugin_dir_path(__FILE__) . 'includes/bfg-project-display-profile.p
 
 require_once plugin_dir_path(__FILE__) . 'includes/bfg-project-register-scripts.php';
 
-
-register_activation_hook( __FILE__, 'project_crear_role' );
-register_deactivation_hook( __FILE__, 'project_remover_role' );
-
-
-
-// en el root del plugin:
-
-register_activation_hook( __FILE__, 'project_agregar_capabilities' );
-register_deactivation_hook( __FILE__, 'project_remover_capabilities' );
-
 register_activation_hook(__FILE__, 'rewrite_flush');
-
-
 
 function searchPostProyectos() {
   $searchOds = $_POST['searchOds'];
