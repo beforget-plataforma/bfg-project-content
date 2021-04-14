@@ -21,7 +21,7 @@ function bfg_project_filter_script() {
     'taxonomy' => 'ods',
     'order' => 'DESC',
   ));
-  wp_register_script('bfgProject', esc_url(plugins_url('/frontend2/dist/bundle.js', dirname(__FILE__) )), true);
+  wp_register_script('bfgProject', esc_url(plugins_url('/frontend/dist/bundle.js', dirname(__FILE__) )), true);
   wp_localize_script('bfgProject', 'bfg_pageviews_ajax', array(
     'ajax_url' => admin_url('admin-ajax.php'),
     'nonce' => wp_create_nonce( 'bfg-pageviews-nonce' ),

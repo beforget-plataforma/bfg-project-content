@@ -1,6 +1,5 @@
 const template = ({ nombre, slug, excerpt, logo, imagen, member, link, content, ods, get_template_directory_uri, get_stylesheet_directory_uri}) => {
   const host = get_stylesheet_directory_uri;
-  console.log(excerpt);
   const displayMemeber = () => {
     return member.map(el => {
       return `${el}`
@@ -15,6 +14,7 @@ const template = ({ nombre, slug, excerpt, logo, imagen, member, link, content, 
   }
   const memeberState = displayMemeber();
   const odsState = displayOds();
+  console.log(excerpt);
   return `<div class="bfg-item-proyectos">
             <a class="no-color" href="${link}">
               <div class="bfg-header-cover-sesiones bfg-has-avatar item-profile flex" style="background-image:url(${imagen})">
@@ -26,7 +26,7 @@ const template = ({ nombre, slug, excerpt, logo, imagen, member, link, content, 
                   <h2 class="title-bit">${nombre}</h2>
                 </div>
                 <div class="group-description">
-                  <p>${excerpt}</p>
+                  <p>${excerpt || content}</p>
                 </div>
               </hgroup>
               <div class="bfg-miembros-proyecto flex bfg-flex-grap">

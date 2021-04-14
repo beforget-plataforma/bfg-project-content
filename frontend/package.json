@@ -9,7 +9,8 @@
     "watch": "webpack -w -d",
     "build": "webpack -p",
     "lint": "node_modules/.bin/esw webpack.config.* src --color",
-    "lint:watch": "npm run lint -- --watch"
+    "lint:watch": "npm run lint -- --watch",
+    "test": "jest --watchAll"
   },
   "keywords": [
     "es6"
@@ -18,13 +19,19 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.2.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
     "@babel/preset-env": "^7.2.0",
+    "babel-jest": "^26.6.3",
     "babel-loader": "^8.0.4",
     "eslint": "^5.10.0",
     "eslint-watch": "^4.0.2",
+    "jest": "^26.6.3",
     "npm-run-all": "^4.0.2",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
   }
 }
