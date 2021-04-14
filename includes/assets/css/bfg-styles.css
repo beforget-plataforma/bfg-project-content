@@ -122,6 +122,9 @@ h3{
 }
 
 .wrapper-post-profile h2,
+.wrapper-post-proyectos-page{
+  margin-top: 35px;
+}
 .wrapper-post-proyectos-page h2{
   margin-bottom: 0 !important;
   line-height: 28px;
@@ -315,4 +318,19 @@ h3{
   height: 17px;
   background: #4d57cb;
   
+}
+.bfg-count-resultados.ods{
+  width: 100%;
+}
+.bfg-content-category.category-ods{
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+}
+.bfg-content-category.category-ods label,
+.bfg-content-category.category-ods label span{
+  height: 80px;
+}
+.bfg-content-category.category-ods label span{
+  text-indent: -10000px;
 }

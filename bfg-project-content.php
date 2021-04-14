@@ -44,7 +44,6 @@ function searchPostProyectos() {
         setup_postdata( $post );
         $title = get_the_title();
         $short_title = wp_trim_words( $title, 12, '...' );
-        $tems = get_term( 1 , 'tipo-sesion' );
 
         $thumbID = get_post_thumbnail_id( $post->ID );
         $imgDestacada = wp_get_attachment_url( $thumbID );

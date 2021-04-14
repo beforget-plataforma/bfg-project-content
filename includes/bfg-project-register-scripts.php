@@ -4,6 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 function bfg_project_tab_script() {
   $profileUserID = bp_displayed_user_id();
   $current_user = wp_get_current_user();
+ 
 
   wp_register_script('bfgProject', esc_url(plugins_url('/frontend/tab/tab-proyecto-profile.js', dirname(__FILE__) )), time(), false);
   wp_localize_script('bfgProject', 'bpRestApi', array(
@@ -16,10 +17,16 @@ function bfg_project_tab_script() {
 
 }
 function bfg_project_filter_script() {
-  wp_register_script('bfgProject', esc_url(plugins_url('/frontend/dist/bundle.js', dirname(__FILE__) )), true);
+  $termsOdsCategory = get_terms( array(
+    'taxonomy' => 'ods',
+    'order' => 'DESC',
+  ));
+  wp_register_script('bfgProject', esc_url(plugins_url('/frontend2/dist/bundle.js', dirname(__FILE__) )), true);
   wp_localize_script('bfgProject', 'bfg_pageviews_ajax', array(
     'ajax_url' => admin_url('admin-ajax.php'),
     'nonce' => wp_create_nonce( 'bfg-pageviews-nonce' ),
+    'taxOdsCategory' => $termsOdsCategory,
+    'is_user_logged_in' => is_user_logged_in()
   ));
 
   wp_enqueue_script('bfgProject');
