@@ -72,7 +72,7 @@ function bfg_project_post_type() {
       'show_ui'           => true,
       'show_admin_column' => true,
       'query_var'         => true,
-      'rewrite' => array( 'slug' => 'tipo-ods' ),
+      'rewrite' => array( 'slug' => 'ods' ),
     );
   
     register_taxonomy( 'ods', array('proyectos' ), $args );
