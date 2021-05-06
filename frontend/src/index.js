@@ -134,7 +134,7 @@ const bfgFilterContent = {
       }
       const chunk = (arr, size) => arr.reduce((acc, e, i) => (i % size ? acc[acc.length - 1].push(e) : acc.push([e]), acc), []);
 
-      bfgFilterContent.dataChunk = chunk(sesiones, 9)
+      bfgFilterContent.dataChunk = chunk(sesiones, 20)
       bfgFilterContent.gotoSesion = 0;
       bfgFilterContent.dataLength = bfgFilterContent.dataChunk.length;
 

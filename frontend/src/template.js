@@ -14,7 +14,6 @@ const template = ({ nombre, slug, excerpt, logo, imagen, member, link, content, 
   }
   const memeberState = displayMemeber();
   const odsState = displayOds();
-  console.log(excerpt);
   return `<div class="bfg-item-proyectos">
             <a class="no-color" href="${link}">
               <div class="bfg-header-cover-sesiones bfg-has-avatar item-profile flex" style="background-image:url(${imagen})">

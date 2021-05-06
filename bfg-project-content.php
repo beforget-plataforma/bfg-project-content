@@ -3,7 +3,7 @@
 Plugin Name: BFG Project Content
 Plugin URI:
 Description: Post type personalizado para el contenido de tipo proyectos
-Version:     1.0
+Version:     2.0
 Author:      Beforget
 Author URI:  https://beforget.com/
 License:     GPL2
