@@ -24,6 +24,7 @@ function bfg_proyectos_posts()
 			)
 		)
 	);
+	print_r($profileUserID);
 	$the_query = new WP_Query($args);
 	if ($the_query->have_posts()) {
 		// $string = '<div class="wrapper-post-talks">';
@@ -72,17 +73,17 @@ function bfg_proyectos_posts()
 								echo bp_core_fetch_avatar($args); 
 							}
 						?>
-						
 					</div>
 					<div class="bfg-ods-proyecto">
 						<ul class="bfg-list flex">
-						<?php foreach($terms as $term): ?>
-								<li class="<?php echo $term->slug; ?>">
-									<img src="<? echo get_stylesheet_directory_uri() . '/assets/images/' . $term->slug . '.png';  ?>" alt="">
-								</li>
-							<?php endforeach; ?>
-							</ul>
-						
+							<?if ($terms):?>
+								<?php foreach($terms as $term): ?>
+									<li class="<?php echo $term->slug; ?>">
+										<img src="<? echo get_stylesheet_directory_uri() . '/assets/images/' . $term->slug . '.png';  ?>" alt="">
+									</li>
+								<?php endforeach; ?>
+							<?php endif;?>
+						</ul>
 					</div>
 				</a>
 			</div>
