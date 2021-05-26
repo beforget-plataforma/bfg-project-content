@@ -103,10 +103,13 @@ h3{
 
 .bfg-miembros-proyecto img{
   width: 30px;
-  height: 30px;
-  margin-right: -5px;
+  margin-left: -5px;
   box-shadow: 1px 1px 1px 3px white;
   background: white;
+
+}
+.bfg-miembros-proyecto img:first-child{
+  margin-left: 0;
 }
 .resumen-proyecto{
   line-height: 24px;
