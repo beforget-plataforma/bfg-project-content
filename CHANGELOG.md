@@ -1,3 +1,7 @@
+##  2.2 (junio, 2021)
+###  Refactor de API de datos 
+* Quitamos la función de Shotcode y la pasamos al nuevo plugin
+
 ##  2.1 (mayo, 2021)
 ###  Corrección de listado en perfiles
 * El funcionamiento del filtro por perfil del usuario no era el correcto. Los resultados que se obtenían en algunos casos eran correctos pero en otros no.
