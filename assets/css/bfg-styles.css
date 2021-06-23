@@ -1,0 +1,347 @@
+.mt-5{
+  margin-top: 80px;
+}
+.mt-2{
+  margin-top: 20px !important;
+}
+
+h3{
+  color: #4d57cb !important;
+}
+.bfg-button-primary{
+  background-color: #4d57cb !important;
+  border-radius: 8px !important;
+}
+
+.bgf-content-project{
+  padding-top: 0 !important;
+}
+.bfg-hero-project{
+  background-color: white;
+}
+.bfg-hero-project img{
+  width: 100%;
+}
+
+.bfg-header-cover-image{
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+.bfg-header-cover-image img{
+  position: absolute;
+  left: 0;
+  top: -45px;
+  transform: scale(1.3);
+}
+
+.bfg-text-left{
+  text-align: left !important;
+}
+.bfg-text-center{
+  text-align: center !important;
+}
+.bfg-wrapper-content{
+  padding: 40px 50px 79px;
+}
+.bfg-hidden{
+  display: none;
+}
+.bfg-block{
+  width: 50%;
+
+}
+.bfg-block-conoce-mas{
+  position: relative;
+  text-align: center;
+  width: 80%;
+  max-width: 330px;
+  text-align: center;
+  margin: 0 auto;
+}
+.bfg-rrss-project{
+  margin: 0 0 1.6875rem 0;
+}
+.bfg-rrss-project li{
+  position: relative;
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  margin: 0 10px;
+}
+.bfg-rrss-project li a{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/bfg-icon-sociales.png');
+  text-indent: -3000px;
+}
+.bfg-rrss-project li a.instagram{
+  background-position: 88px 0;
+}
+.bfg-rrss-project li a.sitio_web{
+  background-position: 39px 0;
+}
+.bfg-rrss-project li a.twitter{
+  background-position: 0 0;
+}
+.bfg-form-contact-project{
+  position: relative;
+  margin: 55px 0;
+  padding: 0 142px;
+}
+
+.bfg-proyectos-in-profile{
+  width: 100%;
+}
+
+.bfg-miembros-proyecto{
+  position: relative;
+  padding: 13px 21px;
+}
+
+.bfg-miembros-proyecto img{
+  width: 30px;
+  margin-left: -5px;
+  box-shadow: 1px 1px 1px 3px white;
+  background: white;
+
+}
+.bfg-miembros-proyecto img:first-child{
+  margin-left: 0;
+}
+.resumen-proyecto{
+  line-height: 24px;
+  height: auto !important;
+}
+.resumen-proyecto p{ 
+  font-size: 1.02rem;
+  font-weight: 100;
+  margin-bottom: 0 !important;
+}
+.bfg-ver-mas-proyectos{
+  padding: 13px 21px;
+}
+
+.wrapper-post-profile h2,
+.wrapper-post-proyectos-page{
+  margin-top: 35px;
+}
+.wrapper-post-proyectos-page h2{
+  margin-bottom: 0 !important;
+  line-height: 28px;
+  font-weight: 400;
+}
+/* Hero Sesiones / Proyctos */
+
+.bfg-wrapper-hero{
+  position: relative;
+  /* width: 680px;
+  margin: 100px auto; */
+}
+.bfg-wrapper-hero h2{
+  font-size: 42px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.18;
+  letter-spacing: 0.8px;
+}
+.bfg-wrapper-hero p{
+  font-size: 22px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.36;
+  letter-spacing: 0.48px;
+}
+.bfg-nav-filter.nav-filter-proyectos{
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bfg-filter-button-ods {
+  display: block;
+  width: 100%;
+}
+
+.bfg-avatar-proyecto {
+  position: relative;
+  width: 115px;
+  height: 115px;
+  min-width: 115px;
+  margin: -114px 0 11px 21px;
+  z-index: 33;
+  box-shadow: 0px 0px 4px 0px #a7a7a7;
+  background: white;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.bfg-avatar-proyecto.detail-page {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  left: initial;
+  bottom: initial;
+  margin-right: 25px;
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  top:-70px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.bfg-ods-proyecto li{
+  width: 45px;
+  margin-right: 10px;
+}
+.bfg-ods-proyecto.sesion-details li{
+  width: 70px;
+}
+.bfg-ods-proyecto li img{
+  width: 100%;
+}
+.bfg-filter-button-ods label{
+  position: relative;
+}
+.bfg-filter-button-ods span{
+  position: relative;
+  margin-left: 24px;
+  font-size: 15px;
+}
+.bfg-filter-button-ods input{
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+}
+
+@media only screen and (max-width: 968px) {
+  .bfg-item-proyectos{
+    width: 49% !important;
+  }
+  .bfg-wrapper-content{
+    padding: 40px 0;
+  }
+  .bfg-project-content{
+    padding: 40px 20px;
+  }
+  .bfg-block-conoce-mas{
+    width: 100%;
+    margin: 50px auto;
+    padding: 0;
+  }
+  .bfg-avatar-proyecto.detail-page {
+    width: 150px;
+    height: 150px;
+  }
+}
+.proyectos-nav-page {
+  max-width: 850px !important;
+  width: 90%;
+  margin: 0 auto 22px !important;
+}
+@media only screen and (max-width: 600px) {
+  .bfg-item-proyectos{
+    width: 100% !important;
+    margin-right: 0;
+  }
+  .bfg-justify-center{
+    justify-content: center;
+  }
+}
+
+/********************************************************************************************************************************/
+/********************************************************************************************************************************/
+/* BEFORGET STYLE  */
+/********************************************************************************************************************************/
+.bfg-list{
+  list-style: none;
+  margin: 0;
+  padding: 13px 15px;
+}
+.bfg-list-no-padding{
+  padding: 0;
+
+}
+.bfg-wrapper-container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.bfg-flex-grap{
+  flex-wrap: wrap;
+}
+.bfg-justify-content-center{
+  justify-content: center;
+}
+
+.bfg-mt-5{
+  margin-top: 50px !important;
+}
+
+.bfg-mb-9{
+  margin-bottom: 90px !important;
+}
+
+.bfg-mb-5{
+  margin-bottom: 10px;
+}
+.bfg-my-6{
+  margin-top: 36px !important;
+  margin-bottom: 36px !important;
+}
+
+.page-template-page-proyectos #content,
+.page-template-page-sesiones #content {
+    padding-left: 0;
+    padding-right: 0;
+}
+.page-template-page-proyectos .container,
+.page-template-page-sesiones .container{
+	max-width: none;
+    padding: 0;
+}
+.page-template-page-proyectos .content-area,
+.page-template-page-sesiones .content-area {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.title-bit{
+  font-size: 24px;
+}
+
+.bfg-tabs:after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 17px;
+  background: #4d57cb;
+  
+}
+.bfg-count-resultados.ods{
+  width: 100%;
+}
+.bfg-content-category.category-ods{
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+}
+.bfg-content-category.category-ods label,
+.bfg-content-category.category-ods label span{
+  height: 80px;
+}
+.bfg-content-category.category-ods label span{
+  text-indent: -10000px;
+}
+.bfg-shotcode-dashboard{
+  width: 100% !important;
+}

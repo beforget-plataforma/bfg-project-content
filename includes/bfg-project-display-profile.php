@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Filtramos los post que mostramos en Talks por cada usuario
  */
-function bfg_proyectos_posts() {
+function proyectos_posts() {
 	global $post;
 	$count = 0;
 	$user_id = bp_displayed_user_id();
@@ -110,4 +110,4 @@ function bfg_proyectos_posts() {
 		wp_reset_postdata();
 	}
 }
-add_shortcode('proyectos-posts', 'bfg_proyectos_posts');
+add_shortcode('proyectos-posts', 'proyectos_posts');
