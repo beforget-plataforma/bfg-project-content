@@ -33,3 +33,29 @@ function bfg_project_filter_script() {
 
 }
 add_action( 'bfg_filter_proyecto_script', 'bfg_project_filter_script' );
+
+function bfg_project_script_slick() {
+  $profileUserID = bp_displayed_user_id();
+  $current_user = wp_get_current_user();
+  $termsType = get_terms( array(
+    'taxonomy' => 'tipo-sesion',
+     'order' => 'DESC',
+  ));
+  $termsCategory = get_terms( array(
+      'taxonomy' => 'categoria-sesion',
+      'order' => 'DESC',
+  ));
+
+  wp_register_script('bfgProyectosSlick', esc_url(plugins_url('/frontend/dist/loadSlickCarrusel.js', dirname(__FILE__) )), true);
+  wp_localize_script('bfgProyectosSlick', 'wp_pageviews_ajax', array(
+    'ajax_url' => admin_url('admin-ajax.php'),
+    'nonce' => wp_create_nonce( 'wp-pageviews-nonce' ),
+    'taxSesionesType' => $termsType,
+    'taxSesionesCat' => $termsCategory,
+    'is_user_logged_in' => is_user_logged_in()
+  ));
+
+  wp_enqueue_script('bfgProyectosSlick');
+}
+
+add_action( 'bfg_filter_proyectos_slick_script', 'bfg_project_script_slick' );
