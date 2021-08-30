@@ -28,7 +28,7 @@ function searchPostProyectos() {
       'orderbyby' => 'ASC',
       'tax_query' => array(
           array(
-            'taxonomy' => 'categoria',
+            'taxonomy' => 'ods',
             'field'    => 'slug',
             'terms'    => $tipoOds,
           ),
@@ -58,7 +58,7 @@ function searchPostProyectos() {
           array_push($members, bp_core_fetch_avatar($args2));
         }
 
-        $logo =  get_post_meta( $post->ID, 'logo_proyecto' );
+        // $logo =  get_post_meta( $post->ID, 'logo_proyecto' );
 
         $listado[] = array(
           'id'   => $post->ID,
