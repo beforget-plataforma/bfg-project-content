@@ -14,14 +14,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 require_once plugin_dir_path(__FILE__) . 'includes/bfg-project-style-register.php';
 require_once plugin_dir_path(__FILE__) . 'includes/bfg-project-post-type.php';
-// require_once plugin_dir_path(__FILE__) . 'includes/metaboxes.php';
-require_once plugin_dir_path(__FILE__) . 'includes/roles.php';
 require_once plugin_dir_path(__FILE__) . 'includes/bfg-project-display-profile.php';
-
-
 require_once plugin_dir_path(__FILE__) . 'includes/bfg-project-register-scripts.php';
-
-register_activation_hook(__FILE__, 'rewrite_flush');
+// register_activation_hook(__FILE__, 'rewrite_flush');
 
 function searchPostProyectos() {
   $searchOds = $_POST['searchOds'];
@@ -33,7 +28,7 @@ function searchPostProyectos() {
       'orderbyby' => 'ASC',
       'tax_query' => array(
           array(
-            'taxonomy' => 'ods',
+            'taxonomy' => 'categoria',
             'field'    => 'slug',
             'terms'    => $tipoOds,
           ),

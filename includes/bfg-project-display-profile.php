@@ -1,19 +1,10 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
-
-
 /**
  * Filtramos los post que mostramos en Talks por cada usuario
  */
-function bfg_proyectos_posts()
-{
-	$user_id = bp_displayed_user_id();
-
-	$authorId = get_the_author_meta( 'ID' );
+function bfg_proyectos_posts() {
 	$profileUserID = bp_displayed_user_id();
-	$current_user = wp_get_current_user();
-	
-	$userData = get_userdata($user_id);
 	$args = array(
 		'post_type' => 'proyectos',
 		'meta_query' => array(
@@ -24,18 +15,16 @@ function bfg_proyectos_posts()
 			)
 		)
 	);
-	print_r($profileUserID);
 	$the_query = new WP_Query($args);
-	if ($the_query->have_posts()) {
-		// $string = '<div class="wrapper-post-talks">';
+	if ($the_query->have_posts()):
 		?>
 		<div class="wrapper-post-profile flex bfg-flex-grap"">
-		<?
+		<?php
 		while ($the_query->have_posts()) {
 			$the_query->the_post();
 			$terms = get_the_terms( $post->ID, 'ods' );
 			?>
-				<?
+				<?php
 					global $post;
 					$thumbID = get_post_thumbnail_id( $post->ID );
 					$imgDestacada = wp_get_attachment_url( $thumbID );
@@ -52,19 +41,18 @@ function bfg_proyectos_posts()
 								$title = get_the_title();
 								$short_title = wp_trim_words( $title, 12, '...' );
 							?>
-							<h2 class="title-bit"><? echo $short_title; ?></h2>
+							<h2 class="title-bit"><?php echo $short_title; ?></h2>
 						</div>
 						<div class="group-description">
 						
-							<? echo the_excerpt(); ?>
+							<?php echo the_excerpt(); ?>
 						</div>
 					</hgroup>
 					<div class="bfg-miembros-proyecto flex bfg-flex-grap">
-					<?
+					<?php
 							$miembros = get_post_meta( get_the_ID(), 'miembros', true );
 							// $user_id = get_the_author_meta( 'ID' );
 							foreach($miembros as $userID){
-								$userName = xprofile_get_field_data('1', $userID);
 								$args = array( 
 									'item_id' => $userID, 
 									'object' => '', 
@@ -76,10 +64,10 @@ function bfg_proyectos_posts()
 					</div>
 					<div class="bfg-ods-proyecto">
 						<ul class="bfg-list flex">
-							<?if ($terms):?>
+							<?php if ($terms):?>
 								<?php foreach($terms as $term): ?>
 									<li class="<?php echo $term->slug; ?>">
-										<img src="<? echo get_stylesheet_directory_uri() . '/assets/images/' . $term->slug . '.png';  ?>" alt="">
+										<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/' . $term->slug . '.png';  ?>" alt="">
 									</li>
 								<?php endforeach; ?>
 							<?php endif;?>
@@ -87,13 +75,13 @@ function bfg_proyectos_posts()
 					</div>
 				</a>
 			</div>
-			<?
+			<?php
 		}
 		?>
 		</div>
-		<?
+		<?php
 		wp_reset_postdata();
-	} else {
+	else:
 		?>
 				<aside class="bp-feedback bp-messages info">
 						<span class="bp-icon" aria-hidden="true"></span>
@@ -102,7 +90,8 @@ function bfg_proyectos_posts()
 						</p>
 				</aside>
 		<?php
-	}
-	// return $string;
+	endif;
+	?>
+	<?php
 }
 add_shortcode('proyectos-posts', 'bfg_proyectos_posts');
