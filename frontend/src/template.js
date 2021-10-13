@@ -5,15 +5,15 @@ const template = ({ nombre, slug, excerpt, logo, imagen, member, link, content, 
       return `${el}`
     })
   }
-  const displayOds = () => {
-    return ods.map(el => {
-      return `<li class="${el.slug}">
-        <img src="${host}/assets/images/${el.slug}.png" alt="">
-      </li>`
-    })
-  }
+  // const displayOds = () => {
+  //   return ods.map(el => {
+  //     return `<li class="${el.slug}">
+  //       <img src="${host}/assets/images/${el.slug}.png" alt="">
+  //     </li>`
+  //   })
+  // }
   const memeberState = displayMemeber();
-  const odsState = displayOds();
+  // const odsState = displayOds();
   return `<div class="bfg-item-proyectos">
             <a class="no-color" href="${link}">
               <div class="bfg-header-cover-sesiones bfg-has-avatar item-profile flex" style="background-image:url(${imagen})">
@@ -33,7 +33,7 @@ const template = ({ nombre, slug, excerpt, logo, imagen, member, link, content, 
               </div>
               <div class="bfg-ods-proyecto">
                 <ul class="bfg-list flex">
-                  ${odsState.join('')}
+
                 </ul>
               </div>
             </a>

@@ -76,7 +76,7 @@ function bfg_project_post_type() {
       'rewrite' => array( 'slug' => 'ods' ),
     );
   
-    register_taxonomy( 'ods', array('proyectos' ), $args );
+    // register_taxonomy( 'ods', array('proyectos' ), $args );
   }
   add_action( 'init', 'bfg_ods_proyectos' );
   ?>

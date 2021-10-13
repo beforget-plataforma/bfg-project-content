@@ -20,27 +20,17 @@ const bfgFilterContent = {
       input.onclick = (e) => {
         let temp = [];
         if (e.target.checked) {
-            if(type === 'ods') {
-                this.postsTipo.push(e.target.value);
-            }else{
-                this.postsCategory.push(e.target.value);
-            }
+          this.postsCategory.push(e.target.value);
+            
         } else {
-            if(type === 'tipo-sesion') {
-                temp = this.postsTipo.filter((val) => {
-                if (val !== e.target.value) {
-                    return val;
-                }
-                });
-                this.postsTipo = temp;
-            }else{
+           
                 temp = this.postsCategory.filter((val) => {
                     if (val !== e.target.value) {
                         return val;
                     }
                 });
                 this.postsCategory = temp;
-            } 
+
         }
         this.getPosts(type);
         bfgFilterContent.initApp = true;
@@ -117,8 +107,8 @@ const bfgFilterContent = {
     data.append('nonce', bfg_pageviews_ajax.nonce);
     data.append('is_user_logged_in', bfg_pageviews_ajax.is_user_logged_in);
     data.append('searchTipo', bfgFilterContent.postsTipo);
-    // data.append('searchCategory', bfgFilterContent.postsCategory);
-    data.append('searchOds', bfgFilterContent.postsCategory);
+    data.append('searchCategory', bfgFilterContent.postsCategory);
+    // data.append('searchOds', bfgFilterContent.postsCategory);
     data.append('type', type);
 
 
@@ -128,7 +118,7 @@ const bfgFilterContent = {
     getServicesTerms(data).then(sesiones => {
       if(sesiones === null) {
         filterSesionesTipo.classList.remove('loading');
-        resultadosSesionesTipo.innerHTML = `<span>Aún no tenemos proyectos con este ODS.</span>`;
+        resultadosSesionesTipo.innerHTML = `<span>Aún no tenemos proyectos con esta categoría.</span>`;
         bfgFilterContent.stateFilter(false, 1, 'pointer');
         return;
       }
@@ -212,5 +202,5 @@ const bfgFilterContent = {
 
 document.addEventListener('DOMContentLoaded', function () {
   bfgFilterContent.init();
-  bfgFilterContent.getPosts('ods');
+  bfgFilterContent.getPosts('categoria-sesion');
 });

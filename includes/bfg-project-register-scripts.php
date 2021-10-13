@@ -18,7 +18,7 @@ function bfg_project_tab_script() {
 }
 function bfg_project_filter_script() {
   $termsOdsCategory = get_terms( array(
-    'taxonomy' => 'ods',
+    'taxonomy' => 'categoria-sesion',
     'order' => 'DESC',
   ));
   wp_register_script('bfgProject', esc_url(plugins_url('/frontend/dist/bundle.js', dirname(__FILE__) )), true);

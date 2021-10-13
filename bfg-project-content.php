@@ -21,20 +21,23 @@ require_once plugin_dir_path(__FILE__) . 'includes/bfg-project-register-scripts.
 function searchPostProyectos() {
   $searchOds = $_POST['searchOds'];
   $tipoOds = explode(",", $searchOds);
+  $searchCategory = $_POST['searchCategory'];
+  $tipoCategoria = explode(",", $searchCategory);
 
   $args = array(
       'post_type' => 'proyectos',
       'posts_per_page' => -1,
       'orderbyby' => 'ASC',
-      'tax_query' => array(
+      'tax_query' => array( 
           array(
-            'taxonomy' => 'ods',
+            'taxonomy' => 'categoria-sesion',
             'field'    => 'slug',
-            'terms'    => $tipoOds,
+            'terms'    => $tipoCategoria,
           ),
         ),
     );
     $posts = get_posts($args);
+    // var_dump($posts);
     foreach ( $posts as $post ) {
         setup_postdata( $post );
         $title = get_the_title();
